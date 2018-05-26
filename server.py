@@ -50,7 +50,7 @@ def check(code, pos, col_name):
                 return jsonify(result=1,name=user[0])
             else:
                 return jsonify(result=2,name=user[0])
-    return jsonify(result=-1,name=user[0])
+    return jsonify(result=-1,name="")
 
 def start_db():
     conn = sqlite3.connect('users.db')
