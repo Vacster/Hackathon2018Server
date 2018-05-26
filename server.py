@@ -47,10 +47,10 @@ def check(code, pos, col_name):
         if user[1] == code:
             if user[pos] == 0:
                 accept(code, col_name)
-                return jsonify(result=1)
+                return jsonify(result=1,name=user[0])
             else:
-                return jsonify(result=2)
-    return jsonify(result=-1)
+                return jsonify(result=2,name=user[0])
+    return jsonify(result=-1,name=user[0])
 
 def start_db():
     conn = sqlite3.connect('users.db')
